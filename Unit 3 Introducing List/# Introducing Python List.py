@@ -48,3 +48,22 @@ print(f'The first motorcycle I owned was a {first_owned}')
 # Removing a item by value using remove method
 motorcycles.remove('honda')
 print(f'Is most expensive and not realiable that {motorcycles}')
+
+# Sorting a List with the sort() method
+cars = ['bmw', 'audi', 'mazda', 'ford', 'toyota', 'subaru']
+# Sorting list in alfabetical order
+cars.sort(reverse=True)
+# Sorting a list temporarily with the sorted() Function.
+print('Here the original list')
+print(cars)
+print('\nHere is the sorted list')
+print(sorted(cars))
+print('\nHere is the original list again')
+print(cars)
+
+# Printing a List in Reverse Order
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.reverse()
+print(cars)
+# Finding the Length of a List
+print(len(cars))
