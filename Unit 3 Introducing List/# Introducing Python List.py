@@ -65,5 +65,10 @@ print(cars)
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 cars.reverse()
 print(cars)
+
 # Finding the Length of a List
 print(len(cars))
+
+# Avoiding Index Error When Working with List
+motor = ['honda', 'yamaha', 'suzuki']
+print(motor[-1])
