@@ -13,4 +13,36 @@ for magician in magicians:
 print("Thank you, everyone. That was a great magic show! ")
 
 # Avoiding Indentation Errors
+# Makin numerical list
+# Using range() function
+for value in range(1, 5):
+    print(value)
 
+# Using range to make a List of Number
+number = list(range(1, 6))
+print(number)
+# If you pass a third argument to range(), Python uses that value as a step size.
+even_number = list(range(2, 11, 2))
+print(even_number)
+
+# Square numbers
+squares = []
+for value in range(1, 11):
+    square = value ** 2
+    squares.append(square)
+print(squares)
+
+# Simple Statistics with a List of Numbers
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+min(digits)
+max(digits)
+sum(digits)
+
+# List Comprehensions
+squares = [value**2 for value in range(1, 11)]
+print(squares)
+
+# Working with a Part of a List
+# Slicing in a List
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
