@@ -46,3 +46,32 @@ print(squares)
 # Slicing in a List
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[0:3])
+print(players[1:4])
+print(players[3:])
+print(players[-3:])
+
+# Looping Through a Slice
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print("Here are the firts three players on my team: ")
+for player in players[:3]:
+    print(player.title())
+
+# Copying a List
+
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+
+print(f'My favorite foods are:')
+print(my_foods)
+print('My friends favorite foods are: ')
+print(friend_foods)
+
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+
+print(f'My favorite foods are:')
+print(my_foods)
+print('My friends favorite foods are: ')
+print(friend_foods)
+
+# Tuples
