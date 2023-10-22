@@ -75,3 +75,19 @@ print('My friends favorite foods are: ')
 print(friend_foods)
 
 # Tuples
+dimensions = [200, 50]
+print(dimensions[0])
+
+# Looping Through All Values in a Tuple
+for dimension in dimensions:
+    print(dimension)
+
+# Writing over a Tuple
+print("Original Dimensions:")
+for dimension in dimensions:
+    print(dimension)
+
+dimensions = [400, 100]
+print("\nModified dimensions")
+for dimension in dimensions:
+    print(dimension)
