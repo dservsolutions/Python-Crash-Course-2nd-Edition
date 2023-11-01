@@ -67,3 +67,43 @@ favorite_languages = {'jen': 'python',
 language = favorite_languages['sarah']
 
 print(f"Sarah's favorite language is {language}")
+
+# Using get() to Access Values
+alien_5 = {'color': 'white', 'speed': 'slow'}
+point_value = alien_5.get('points', 'No point value assigned. ')
+print(point_value)
+
+
+# Looping through All Key-Value Pairs
+# for key, value in favorite_languages.items():
+#     print(f"Name: {key}, Favorite Language: {value}")
+
+
+# for name in favorite_languages.keys():
+#     print(f"Name:{name}")
+
+
+# friends = ['jhon', 'pedro', 'sarah']
+# for name in favorite_languages.keys():
+#     print(f"Hi {name.title()}")
+
+#     if name in friends:
+#         language = favorite_languages[name].title()
+#         print(f"\t{name.title()}, I see you love {language}! ")
+    
+# if 'erin' not in favorite_languages.keys():
+#     print(f"Erin, please take our poll! ")
+
+# Looping through a Dictionary's Keys in a Particular Order.
+for names in sorted(favorite_languages.keys()):
+    print(f"{names.title()}, thank your for taking the poll")
+
+
+# Looping throught All Values in a Dictionary
+# print("The following programming languages have been mentioned")
+# for language in favorite_languages.values():
+#     print(language.title())
+
+for language in set(favorite_languages.values()):
+    print(language.title())
+
