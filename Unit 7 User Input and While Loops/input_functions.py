@@ -80,7 +80,62 @@
 
 
 # Avoiding infinite loops
-x = 1
-while x <= 5:
-    print(x)
-    x += 1
+# x = 1
+# while x <= 5:
+#     print(x)
+#     x += 1
+
+# Using a While Loop with List and Dictionaries.
+# Start with users that need to be verified,
+# and an empty list to hold confirmed users.
+
+# unconfirmed_users = ['alice', 'brian', 'candance']
+# confirmed_users = ['']
+
+# Verify each user until there are no more unconfirmed users.
+# Move each verified user into the list of confirmed users.
+
+# while unconfirmed_users:
+#     current_user = unconfirmed_users.pop()
+
+#     print(f"Verifying user: {current_user.title()}")
+#     confirmed_users.append(current_user)
+
+# print(f"The following users have been confirmed: ")
+# for confirmed_user in confirmed_users:
+#     print(confirmed_user.title())
+
+# Removing All Instances of Specified Value from a list
+
+# pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+# print(pets)
+
+# while 'cat' in pets:
+#     pets.remove('cat')
+
+# print(pets)
+
+# Filling a Dictionary with User Input
+
+responses = {}
+
+# Set a flag to indicate that polling is active
+polling_active = True
+
+while polling_active:
+    # Prompt for the person's name and response
+    name = input("\nPlease enter your name: ")
+    response = input("\n Which mountain would you like to climb someday? ")
+
+    # Store the response in the dictionary
+    responses[name] = response
+
+    # Find out if anyone else is going to take the poll.
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat.lower() != 'yes':
+        polling_active = False
+
+    # Polling is complete. Show the results.
+    print("\n--- Poll results---")
+    for name, response in responses.items():
+        print(f"{name} would like to climb {response}.")
