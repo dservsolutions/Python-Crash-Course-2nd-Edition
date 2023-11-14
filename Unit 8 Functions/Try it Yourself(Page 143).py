@@ -9,10 +9,10 @@
 
 # 8.7 Album
 def make_album(aname, atitle, nsongs=None):
-    music_album = {'artist_name': aname.title(),
-                   'album_title': atitle.title(),
+    music_album = {'artist_name': aname,
+                   'album_title': atitle,
                    'number_of_songs': nsongs}
-    
+    print(f"{music_album.values()}")
 
 # make_album('dido', 'white flag')
 # make_album('coolplay', 'viva la vida')
@@ -20,11 +20,14 @@ def make_album(aname, atitle, nsongs=None):
 # make_album('candyman', 'the chinese', 13)
 
 # 8.8 User's Albums
-prompt = "Enter 'quit' to close the program."
-aname = input("\nPlease enter an artist name: ")
-atitle = input("\nAdd the song title: ")
 
-while prompt != 'quit':
-    make_album(aname, atitle)
-print(f"{music_album.values()}")
+print("Please enter 'quit' to close the program: ")
+aname = input("\nEnter the artist name: ")
+atitle = input("\nAdd the album title: ")
+nsongs = input("\nNumber of songs: ")
 
+
+while aname == 'quit':
+    break
+if aname != 'quit':
+    make_album(aname, atitle, nsongs)
