@@ -119,6 +119,7 @@ def print_models(unprinted_designs, completed_models):
         print(f"Printing models: {current_design}")
         completed_models.append(current_design)
     
+
 def show_completed_models(completed_models):
     print(f"\nThe following models have been printed: {completed_models}")
     for completed_model in completed_models:
@@ -129,6 +130,14 @@ completed_models = []
 
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
+
+
+# Preventing a Funtion from Modifiying a List
+print_models(unprinted_designs[:], completed_models)
+
+
+
+
 
 
 
