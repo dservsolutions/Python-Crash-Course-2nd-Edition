@@ -113,32 +113,65 @@
 
 
 # The same before example, but more organized using functions.
-def print_models(unprinted_designs, completed_models):
-    while unprinted_designs:
-        current_design = unprinted_designs.pop()
-        print(f"Printing models: {current_design}")
-        completed_models.append(current_design)
+# def print_models(unprinted_designs, completed_models):
+#     while unprinted_designs:
+#         current_design = unprinted_designs.pop()
+#         print(f"Printing models: {current_design}")
+#         completed_models.append(current_design)
     
 
-def show_completed_models(completed_models):
-    print(f"\nThe following models have been printed: {completed_models}")
-    for completed_model in completed_models:
-        print(completed_model)
+# def show_completed_models(completed_models):
+#     print(f"\nThe following models have been printed: {completed_models}")
+#     for completed_model in completed_models:
+#         print(completed_model)
 
-unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
-completed_models = []
+# unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+# completed_models = []
 
-print_models(unprinted_designs, completed_models)
-show_completed_models(completed_models)
+# print_models(unprinted_designs, completed_models)
+# show_completed_models(completed_models)
 
 
 # Preventing a Funtion from Modifiying a List
-print_models(unprinted_designs[:], completed_models)
+# print_models(unprinted_designs[:], completed_models)
 
+# Passing an Arbitrary Number of Arguments
+# The asteric in the parameter name tells python to make a empty tuple calle toppings
+# def make_pizza(*toppings):
+#     """Print the list of toppings that have been requested"""
+#     print(toppings)
 
+# make_pizza('pepperoni')
+# make_pizza('mushroom', 'green peppers', 'extra cheese')
 
+# Other example using a foor loop
+# def make_pizza(*toppings):
+#     """Summarize the pizza we are about to make"""
+#     print("\nMaking a pizza with the following toppings: ")
+#     for topping in toppings:
+#         print(f"- {topping}")
 
+# make_pizza('pepperoni')
+# make_pizza('mushrooms', 'gree peppers', 'extra cheese')
 
+# Mixing a Positional and Arbitrary Arguments
+# def make_pizza(size, *toppings):
+#     print(f"\nMaking a {size}-inch pizza with the following toppings: ")
+#     for topping in toppings:
+#         print(f"-{topping}")
 
+# make_pizza(16, 'pepperoni')
+# make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+# Using Arbitrary Keywords Arguments
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing everything we know about a user. """
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('albert', 'einstein', location= 'princeton', field='physics')
+
+print(user_profile)
 
       
