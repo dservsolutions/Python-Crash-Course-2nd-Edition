@@ -175,4 +175,15 @@ user_profile = build_profile('albert', 'einstein', location= 'princeton', field=
 print(user_profile)
 
 # Storing your Functions in  Modules
+# Using as to Give a Function an Alias
+"""from module_name import function_name as fn"""
+# Using as to Give a Module an Alias
+import pizza as p
+p.make_pizza(16, 'pepperoni')
+p.make_pizza(12, 'mushroom', 'green peppers', 'extra cheese')
+# import module_name as mn
 
+# Importing all Functions in a Module
+from pizza import *
+make_pizza(12, 'pepperoni')
+make_pizza(16, 'cheese')
