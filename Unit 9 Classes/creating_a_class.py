@@ -56,6 +56,25 @@ class Car:
     def read_odometer(self):
         """Print a statement that showing the car mileage."""
         print(f"This car has {self.odometer_reading} miles on it.")
+
+    # Modifying an Attribute's Value Through a Method
+    def update_odometer(self, mileage):
+        """Set the odometer reading to the given value."""
+        # self.odometer_reading = mileage
+        """
+        Set the odometer reading to the given value.
+        Reject the change if it attemps to roll the odometer back.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+
+    def increment_odometer(self, miles):
+        """Add the given amount to the odometer reading."""
+        self.odometer_reading += miles
+
+
     
 # Creating an instance
 my_new_car = Car('audi', 'a4', 2019)
@@ -64,5 +83,26 @@ print(my_new_car.get_descriptive_name())
 # Setting a Default Value for an attribute
 my_new_car.read_odometer()
 
+# Modifying attributes values
+# Modifying an Attribute Value Directly
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()
 
 
+# Modifying an Attribute's Value Through a Method(Getting the response of the change)
+my_new_car.update_odometer(32)
+my_new_car.read_odometer()
+
+my_new_car.update_odometer(10)
+my_new_car.read_odometer()
+
+
+# Incrementing an Attribute's Values throught a Method
+my_user_car = Car('Subaru', 'Outback', 2015)
+print(my_user_car.get_descriptive_name())
+
+my_user_car.update_odometer(23_500)
+my_user_car.read_odometer()
+
+my_user_car.increment_odometer(100)
+my_user_car.read_odometer()
