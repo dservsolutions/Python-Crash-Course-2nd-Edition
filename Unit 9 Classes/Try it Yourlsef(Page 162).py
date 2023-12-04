@@ -55,3 +55,5 @@ user_2 = User('jhon', 'wick enough', 'jhon_wick2024@proton.com')
         
 for users in user_0,user_1, user_2:
     users.describe_user()
+
+    
