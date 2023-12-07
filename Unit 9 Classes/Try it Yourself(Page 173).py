@@ -19,24 +19,27 @@ icecream = IceCreamStand('Wendys', 'American Cuisine')
 
 # icecream.display_flavors()
 
+# 9.7 Admin
+class Admin(User):
+    def __init__(self, first_name, last_name, email):
+        super().__init__(first_name, last_name, email)
+        self.priv = Privileges(self)
+        
+        
+    # Making an instance
+admin = Admin('david', 'pedroso', 'hola@gmail.com')
+admin.priv.show_privileges()
+
 # 9.8 Privileges
 class Privileges:
     def __init__(self):
         self.privileges = ['can add post', 'can delete post', 'can ban user']
     # Method
-    def show_privileges(self):
+    def show_privileges(self, privilege_level):
         print("Administrator's set of privileges:")
         for privilege in self.privileges:
             print(privilege.title())
 
-# 9.7 Admin
-class Admin(User):
-    def __init__(self, first_name, last_name, email):
-        super().__init__(first_name, last_name, email)
-        self.pri = Privileges()
-        
-    # Making an instance
-admin = Admin('david', 'pedroso', 'ppdavisito89@outlook.es')
 
 
 
