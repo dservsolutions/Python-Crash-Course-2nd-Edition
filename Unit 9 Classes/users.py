@@ -5,8 +5,8 @@ class User:
         self.email = email
     # Method Describe User
     def describe_user(self):
-        print(f"Name: {self.firstname.title()}\n")
-        print(f"Lastname: {self.lastname.title()}\n")
+        print(f"Name: {self.firstname.title()}")
+        print(f"Lastname: {self.lastname.title()}")
         print(f"Email: {self.email}")
     # Method Greet User 
     def greet_user(self):
