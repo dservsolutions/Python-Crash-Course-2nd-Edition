@@ -41,7 +41,7 @@ class Admin(User):
 admin = Admin('david', 'pedroso', 'ppdavisito89@outlook.es')
 
 
-# 9.9 
+# 9.9 Battery Upgrade
 class Battery(ElectricCar):
      def __init__(self, make, model, year):
           super().__init__(make, model, year)
@@ -57,7 +57,7 @@ class Battery(ElectricCar):
 
 # Making a new instance
 my_car = Battery('Rivian', 'R1s', 2022)
-my_car.describe_battery()
+my_car.get_range()
 
 
 
