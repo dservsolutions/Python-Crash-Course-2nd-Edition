@@ -41,6 +41,27 @@ class Admin(User):
 admin = Admin('david', 'pedroso', 'ppdavisito89@outlook.es')
 
 
+# 9.9 
+class Battery(ElectricCar):
+     def __init__(self, make, model, year):
+          super().__init__(make, model, year)
+          self.battery_size = 100
+
+        # Method Upgrade Battery
+     def upgrade_battery(self):
+         if self.battery_size != 100:
+          print("The battery need to be upgrade.")
+          self.battery_size = 100
+         else:
+             print("The battery is ready.")
+
+# Making a new instance
+my_car = Battery('Rivian', 'R1s', 2022)
+my_car.describe_battery()
+
+
+
+
 
 
 
