@@ -1,5 +1,10 @@
-# Importing a Single Class
 from car import Car
 
-ford_fusion = Car('Ford', 'Fusion', 2022)
+my_new_car = Car('Ford', 'Fusion', 2022)
+print(my_new_car.get_descriptive_name())
+
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()
+
+
 

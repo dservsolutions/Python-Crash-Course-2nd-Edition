@@ -55,15 +55,8 @@ class ElectricCar(Car):
         print(f"This car can go about {range} miles on a full charge. ")
 
 # Making a new instance
-my_tesla = ElectricCar('Tesla', 'Model S', 2018)
-my_rivian = ElectricCar('Rivian', 'R1 S', 2022)
-
-
-
-print(my_tesla.get_descriptive_name())
-my_tesla.describe_battery()
-my_tesla.get_range()
-
+# my_tesla = ElectricCar('Tesla', 'Model S', 2018)
+# my_rivian = ElectricCar('Rivian', 'R1 S', 2022)
 
 
 
