@@ -10,7 +10,7 @@ class Students:
         print(f"Age: {self.age}")
         
 # Making a instance
-std_1 = Students('David', 'Pedroso', 33)
+# std_1 = Students('David', 'Pedroso', 33)
 
 
-std_1.students_inf()
+# std_1.students_inf()
