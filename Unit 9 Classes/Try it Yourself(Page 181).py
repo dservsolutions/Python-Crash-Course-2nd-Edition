@@ -1,16 +1,24 @@
 # 9.13 Dice
 import random
 
-class Die:
+class Dice:
     
-    def __init__(self):
-        self.sides = 6
+    def __init__(self, sides):
+        self.sides = sides
+
     # Methods
     def roll_die(self):
-        sides = random.randint(1, self.sides)
-        for sides in range(1, 9):
-            print(sides)
+        for _ in range(10):
+            number = random.randint(1, self.sides)
+            print(f"Dice roll:{number}")
+        
 
-# Making a instance
-die = Die()
-die.roll_die()
+# Making instances
+dice_6 = Dice(sides= 6)
+dice_6.roll_die()
+
+dice_10 = Dice(sides= 10)
+dice_10.roll_die()
+
+dice_20 = Dice(sides=20)
+dice_20.roll_die()
