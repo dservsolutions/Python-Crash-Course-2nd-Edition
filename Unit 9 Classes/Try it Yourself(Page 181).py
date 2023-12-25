@@ -25,16 +25,20 @@ class Dice:
 
 
 # 9.14 Lottery
-numbers = (1, 12, 14, 22, 33, 44, 51, 61, 88, 102, 'a', 'b', 'c', 'd', 'e', 'f')
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'a', 'b', 'c', 'd', 'e', 'f')
 random_items = random.sample(numbers, 4)
-# print(f"None ticket match with these charapters: ")
-# for items in random_items:
-#     print(items)
+
 
 # 9.15 Lottery Analysis:
-my_ticket = (12, 1, 33, 'a')
-stop = False
-while stop:
+# Tuple
+my_ticket = (2, 3, 4, 'a')
+counter = 0
+while True:
     for items in random_items:
-        print(items)
+        counter +=1
+        print(f"The loop had run: {counter} times.")
+        for ticket in my_ticket:
+            if ticket == items:
+                break
+         
        
